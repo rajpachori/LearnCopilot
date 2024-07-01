@@ -79,26 +79,6 @@ function App() {
       <button onClick={() => handleCreateOrUpdate(false)}>Create</button>
       <button onClick={() => handleCreateOrUpdate(true)}>Update</button>
       <button onClick={handleDelete}>Delete</button>
-            {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect()}>Log In</button>
-      )}
-      {isAuthenticated && (
-        <>
-          <input
-            type="text"
-            value={empID}
-            onChange={(e) => setEmpID(e.target.value)}
-            placeholder="Enter Employee ID"
-          />
-          <button onClick={fetchEmployeeData} disabled={loading}>
-            Search
-          </button>
-          {/* Existing UI components */}
-          <button onClick={() => logout({ returnTo: window.location.origin })}>
-            Log Out
-          </button>
-        </>
-      )}
     </div>
   );
 }
