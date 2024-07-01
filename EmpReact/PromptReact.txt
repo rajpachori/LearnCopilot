@@ -1,0 +1,66 @@
+I want to build a single page app with following functionality on a single page
+
+1. Page will have textbox and button. Textbox will accept EmpD. 
+2. Search button will connect with NodeJS program running on Port 3000, generating JSON output for Employee Information for EmpID passed from textbox.
+3. React program should collect this Employee Information available in JSON format 
+	a. EmpName
+	b. Designation
+	c. EmpDOJ
+	d. ManagerName
+	e. Compensation
+	f. EmpStatus 
+4. Then information collected in step#3 is displayed in tabular format in 2 columns. First column will have above mentioned 6 field names and second column will have values for 6 fields collected from NodeJS JSON. 
+
+Please modify the program, make below mentioned changes and regenerate the whole program
+1. Retain the existing search functionality.
+2. Once the Employee information is displayed after clicking on search button; show new button "Delete" at the bottom.
+3. NodeJS program on port 4000 listening and has delete functionality enabled.
+4. When user clicks on the Delete button, employee data should be deleted using Delete API of NodeJS. 
+
+
+Not in this kind of table format. 
+
+information collected in JSON should be displayed in tabular format in 2 columns. First column will have below mentioned 6 field names and second column will have values for 6 fields collected from NodeJS JSON. 
+
+	a. EmpName
+	b. Designation
+	c. EmpDOJ
+	d. ManagerName
+	e. Compensation
+	f. EmpStatus 
+
+Please review app.js and suggest code for "Create Employee". NodeJS functionality for Create Employee is available on port 4000.
+Consider below mentioned fields for adding.
+
+	a. EmpID
+	b. EmpName
+	c. Designation
+	d. EmpDOJ
+	e. ManagerName
+	f. Compensation
+	g. EmpStatus  
+
+
+Create new program from scratch for searching, creating, updating and deleting the employee. NodeJS server component is successfully deployed and working fine on port number 4000. NodeJS returns the information in JSON format.
+ 
+These will be the UI components.
+
+1. Text "input" field for entering the EmpID.
+2. "Search" button along side Text input field for searching the employee.
+3. Table with 2 columns. First column will have below mentioned 7 field names mentioned below and second column will have values for 7 fields displayed in Input field.
+	a. EmpID
+	b. EmpName
+	c. Designation
+	d. EmpDOJ
+	e. ManagerName
+	f. Compensation
+	g. EmpStatus  
+4. "Create", "Update" and "Delete" button below the table.
+
+This is the expected behavior of each button
+1. "Search" button: Data fetched from JSON is populated in the second column "input" field of the table beside respective field name.
+2. "Create" button: Data available in each of the input fields, creates a new employee data.
+3. "Update" button: Data available in each of the input fields, updates employee data for EmpID value populated in the second column of the table.
+4. "Delete" button: Delete employee data for EmpID value populated in the second column of the table.
+
+
