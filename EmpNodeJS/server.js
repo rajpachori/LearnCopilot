@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 4000;
+const port = 3000;
 const cors = require('cors');
 
 app.use(cors());
@@ -25,26 +25,22 @@ connection.connect((err) => {
     console.log('Connected to the database');
 });
 
-// Fetch Employee Details
+// Define the GET /employee/:empId route
 app.get('/employee/:empId', (req, res) => {
-    const empId = req.params.empId;
-    const query = 'SELECT * FROM employeeinfo WHERE EmpID = ?';
-
+    const { empId } = req.params;
+    const query = 'SELECT * FROM employeeinfo WHERE EmpID = ?'; // Assuming SQL and a table named Employees
+  
     connection.query(query, [empId], (error, results) => {
-        if (error) {
-            console.error('Error fetching employee details:', error);
-            res.status(500).send({ message: 'Error fetching employee details' });
-            return;
-        }
-
-        if (results.length === 0) {
-            res.status(404).send({ message: 'No employee found with the specified EmpID' });
-            return;
-        }
-
-        res.json(results[0]);
+      if (error) {
+        return res.status(500).send('Internal Server Error1');
+      }
+      if (results.length > 0) {
+        return res.status(200).json(results[0]);
+      } else {
+        return res.status(404).send('Employee not found');
+      }
     });
-});
+  });
 
 // Create Employee
 app.post('/employee', (req, res) => {
