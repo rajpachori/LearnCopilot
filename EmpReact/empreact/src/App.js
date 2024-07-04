@@ -50,12 +50,13 @@ function App() {
   return (
     <div>
       <input
+        id="empIdInput"
         type="text"
         value={empID}
         onChange={(e) => setEmpID(e.target.value)}
         placeholder="Enter Employee ID"
       />
-      <button onClick={fetchEmployeeData} disabled={loading}>
+      <button id="btnSearch" onClick={fetchEmployeeData} disabled={loading}>
         Search
       </button>
       {error && <p>{error}</p>}
@@ -66,6 +67,7 @@ function App() {
               <td>{key}</td>
               <td>
                 <input
+                  id={key}
                   type="text"
                   name={key}
                   value={value}
@@ -76,9 +78,9 @@ function App() {
           ))}
         </tbody>
       </table>
-      <button onClick={() => handleCreateOrUpdate(false)}>Create</button>
-      <button onClick={() => handleCreateOrUpdate(true)}>Update</button>
-      <button onClick={handleDelete}>Delete</button>
+      <button id="btnCreate" onClick={() => handleCreateOrUpdate(false)}>Create</button>
+      <button id="btnUpdate" onClick={() => handleCreateOrUpdate(true)}>Update</button>
+      <button id="btnDelete" onClick={handleDelete}>Delete</button>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+I have ReactJS EmployeeManagement web application available in the folder "C:\Programming\EmployeeMgmt\EmpReact\empreact".
+JavaScript file App.js for EmployeeManagement is available in this folder "C:\Programming\EmployeeMgmt\EmpReact\empreact\src".
+This web application responsible for fetching, creating, updating and deleting the employee information.
+
+Please help writing Selenium automation program for the EmployeeManagement in JavaScript. 
+
+For "home.spec.js", please suggest code for Search button click with id "btnSearch" after the "empIdInput" input box is populated.
+
+For "home.spec.js", please suggest code for Delete button click with id "btnDelete" after the "btnSearch" is clicked. 
+
+For "home.spec.js", please suggest code for Update in this sequence
+1. Set the value in the input field "EmpName" to  'Tom Erichsen3U'.
+2. Button click with id "btnUpdate".  
+
+For "home.spec.js", please suggest code for Create in this sequence
+1. Set the below mentioned comma separated values in curly braces for the input fields "EmpID", "EmpName", "Designation", "EmpDOJ", "ManagerName", "Compensation" and "EmpStatus".
+{'12349', 'Tom Erichsen4', 'SWE24', '8/10/2021','Shiva Muralidhar4','1040004','Active4'}
+2. Button click with id "btnCreate".  
+
+
+
