@@ -17,5 +17,7 @@ For "home.spec.js", please suggest code for Create in this sequence
 {'12349', 'Tom Erichsen4', 'SWE24', '8/10/2021','Shiva Muralidhar4','1040004','Active4'}
 2. Button click with id "btnCreate".  
 
+In "home.spec.js", "Delete" operation is executed after "Create" operation. I get an alert with "OK" button after the record is successfully "Created ". However this alert stops "Delete" operation as I don't have script for clicking the "OK" button in the alert, after the "Create" operation. Please suggest how to handle the alert box so "Delete" operation can run smoothly after "Create" operation.  
+
 
 
