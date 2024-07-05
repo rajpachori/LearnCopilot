@@ -32,7 +32,7 @@ app.get('/employee/:empId', (req, res) => {
   
     connection.query(query, [empId], (error, results) => {
       if (error) {
-        return res.status(500).send('Internal Server Error1');
+        return res.status(500).send('Internal Server Error');
       }
       if (results.length > 0) {
         return res.status(200).json(results[0]);
