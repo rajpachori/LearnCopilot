@@ -16,6 +16,7 @@ These will be the UI components.
 4. "Create", "Update" and "Delete" button below the table.
 
 This is the expected behavior of each button
+
 1. "Search" button: Data fetched from JSON is populated in the second column "input" field of the table beside respective field name.
 2. "Create" button: Data available in each of the input fields, creates a new employee data.
 3. "Update" button: Data available in each of the input fields, updates employee data for EmpID value populated in the second column of the table.
